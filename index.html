@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #292929;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: auto;
+            height: 60vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .square {
+            background-color: inherit;
+            flex: 1;
+            border: solid #292929 2px;
+            font-size: 120px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .line {
+            display: flex;
+            height: 200px;
+            width: 600px;
+            background-color: inherit;
+        }
+
+        .tictactoe {
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            background-color: wheat;
+        }
+
+        span {
+            background-color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tictactoe">
+        <div class="line">
+            <div class="square home-1"></div>
+            <div class="square home-2"></div>
+            <div class="square home-3"></div>
+        </div>
+        <div class="line">
+            <div class="square home-4"></div>
+            <div class="square home-5"></div>
+            <div class="square home-6"></div>
+        </div>
+        <div class="line">
+            <div class="square home-7"></div>
+            <div class="square home-8"></div>
+            <div class="square home-9"></div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
