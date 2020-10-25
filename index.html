@@ -14,31 +14,32 @@
         }
 
         body {
-            width: auto;
-            height: 60vw;
-            display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: center;
         }
 
         .square {
             background-color: inherit;
-            flex: 1;
+            flex: 33%;
             border: solid #292929 2px;
             font-size: 120px;
-            padding: 10px;
             text-align: center;
+            align-items: center;
+            height: 170px;
         }
 
-        .line {
-            display: flex;
+        /* .line {
+            
             height: 200px;
             width: 600px;
             background-color: inherit;
-        }
+        } */
 
-        .tictactoe {
+        .board {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
             margin: auto;
             width: 500px;
             height: 500px;
@@ -52,23 +53,9 @@
 </head>
 
 <body>
-    <div class="tictactoe">
-        <div class="line">
-            <div class="square home-1"></div>
-            <div class="square home-2"></div>
-            <div class="square home-3"></div>
-        </div>
-        <div class="line">
-            <div class="square home-4"></div>
-            <div class="square home-5"></div>
-            <div class="square home-6"></div>
-        </div>
-        <div class="line">
-            <div class="square home-7"></div>
-            <div class="square home-8"></div>
-            <div class="square home-9"></div>
-        </div>
+    <div class="board">
     </div>
+    <script src="./controllers/tictactoeController.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
