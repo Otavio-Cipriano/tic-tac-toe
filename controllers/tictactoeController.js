@@ -1,7 +1,9 @@
 class TicTacToe {
     constructor() {
         this.winner = null;
+        this.position = 0;
         this.currentPlayer = 'X'
+        this.lineElement = document.querySelector('div[class="line"]')
         this.boardHtml = document.querySelector('div[class="board"]')
         this.board = ['', '', '', '', '', '', '', '', ''];
         this.winnerSquels = ['012', '345', '678', '036', '147', '358', '048', '246']
@@ -22,14 +24,18 @@ class TicTacToe {
     }
 
     checkResult() {
-        let i;
-        for (i = 0; i < this.winnerSquels.length; i++) {
+        let i = 0;
+        while (i < this.winnerSquels.length) {
             let pos1 = this.winnerSquels[i][0]
             let pos2 = this.winnerSquels[i][1]
             let pos3 = this.winnerSquels[i][2]
-            if (this.board[pos1] == this.board[pos2] && this.board[pos2] == this.board[pos3]) {
+            if (this.board[pos1] === this.board[pos2]
+                && this.board[pos2] === this.board[pos3]
+                && this.board[pos3] == this.board[pos1]) {
                 this.winner = this.board[pos1]
+                this.position = pos1 + pos2 + pos3
             }
+            i++
         }
         if (this.winner) {
             alert('Vencedor ' + this.winner)
@@ -53,4 +59,17 @@ class TicTacToe {
         }, 1);
     }
 
+    drawLineWhere(position) {
+        switch (position) {
+            case 012:
+                this.lineElement.style
+                break;
+        
+            default:
+                break;
+        }
+    }
+    drawLine(){
+
+    }
 }

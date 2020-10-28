@@ -8,44 +8,36 @@
     <style>
         * {
             background-color: #292929;
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
-        }
-
-        body {
-            align-items: center;
-            justify-content: center;
         }
 
         .square {
             background-color: inherit;
             flex: 33%;
             border: solid #292929 2px;
-            font-size: 120px;
+            font-size: 100px;
             text-align: center;
             align-items: center;
             height: 170px;
         }
 
-        /* .line {
-            
-            height: 200px;
-            width: 600px;
-            background-color: inherit;
-        } */
+        .square:hover {
+            background-color: rgb(255 215 141);
+            cursor: pointer;
+        }
 
         .board {
-            margin: auto;
             display: flex;
             flex-direction: row;
-            flex-wrap:wrap;
-            margin: auto;
-            width: 500px;
-            height: 500px;
+            flex-wrap: wrap;
+            width: 45%;
             background-color: wheat;
+            align-items: center;
+            justify-content: center;
+            min-width: 299px;
         }
-        .result{
+
+        .result {
             margin: auto;
             position: absolute;
             color: white;
@@ -54,17 +46,47 @@
             background-color: black;
             display: none;
         }
+
         span {
             background-color: inherit;
+        }
+
+        .container {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+
+        }
+
+        .line {
+            position: absolute;
+            height: 90%;
+            left: 50%;
+            background: transparent;
+            display: none;
+        }
+
+        .line::before {
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 100%;
+            z-index: 10;
+            border-radius: 6px 6px 6px 6px;
+            background-color: #ff105e;
         }
     </style>
 </head>
 
 <body>
-    <div class="board">
+    <div class="container">
+        <div class="board"></div>
+        <div class="line"></div>
     </div>
     <div class="result">VENCEDOR É X</div>
     <script src="./controllers/tictactoeController.js"></script>
     <script src="./index.js"></script>
 </body>
+
 </html>
