@@ -1,1 +1,1 @@
-const monkey = new TicTacToe()
+Window.monkey = new TicTacToe()
